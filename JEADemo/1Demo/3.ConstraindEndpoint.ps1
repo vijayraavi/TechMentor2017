@@ -32,8 +32,6 @@ $JEAConfigParams = @{
     RoleDefinitions = @{'Company\JEA Print Operators' = @{ RoleCapabilities = 'PrintOperator' }}
 }
 
-ISE C:\test\session.pssc
-
 New-PSSessionConfigurationFile -Path "$env:ProgramData\JEAConfiguration\JEAPrintOperators.pssc" @JEAConfigParams
 
 

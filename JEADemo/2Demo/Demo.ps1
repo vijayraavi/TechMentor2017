@@ -20,11 +20,11 @@ Get-Childitem -path c:\JEADeploy
 
 # Create an installation script
 New-Item -Path c:\JeaDeploy\JeaDeploy.ps1 -ItemType File
-ISE C:\JeaDeploy\JeaDeploy.ps1
+Code C:\JeaDeploy\JeaDeploy.ps1
 
 # Deploy files
 # Run the script on the remote computers
-Invoke-Command -ComputerName s1 -FilePath C:\JeaDeploy\JeaDeploy.ps1
+Invoke-Command -ComputerName dc -FilePath C:\JeaDeploy\JeaDeploy.ps1
 
 # Test/Troubleshoot
 Get-Childitem -path '\\s1\c$\ProgramData\JEAConfiguration'
