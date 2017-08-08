@@ -28,11 +28,10 @@ $MaintenanceRoleCapabilityCreationParams = @{
     # $PSSenderInfo is not exposed by default - so we make a function to display that is
 }
 
-
 New-PSRoleCapabilityFile @MaintenanceRoleCapabilityCreationParams 
 
 #Verify the settings
 
-ISE "$env:ProgramFiles\WindowsPowerShell\Modules\JEAPrintOperators\RoleCapabilities\PrintOperator.psrc"
+Code "$env:ProgramFiles\WindowsPowerShell\Modules\JEAPrintOperators\RoleCapabilities\PrintOperator.psrc"
 
 # End Demo

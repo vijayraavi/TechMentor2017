@@ -38,16 +38,15 @@ Add-ADGroupMember -Identity 'JEA Service Operators' -Members JillJea
 New-Item -Path c:\test -ItemType Directory
 New-PSRoleCapabilityFile -Path c:\Test\Capability.psrc  # explain extenstion - path must end with file.psrc
 New-PSSessionConfigurationFile -Path c:\test\Session.pssc
-ISE C:\test\session.pssc
-ISE c:\test\Capability.psrc
+Code C:\test\session.pssc
+Code c:\test\Capability.psrc
 Remove-Item C:\test\*
 
 # Now using Parameters
 Remove-Item C:\test\*
 New-PSRoleCapabilityFile -Path C:\test\Capability.psrc -Author 'Company Admin' -CompanyName 'Company' -VisibleCmdlets Restart-Service  
-ISE C:\test\Filename.psrc
-
-
+Code C:\test\Capability.psrc
+Remove-Item C:\test\*
 
 
 
@@ -74,12 +73,9 @@ $MaintenanceRoleCapabilityCreationParams = @{
     FunctionDefinitions = @{ Name = 'Get-UserInfo'; ScriptBlock = { $PSSenderInfo } }
 }
 
-
 New-PSRoleCapabilityFile @MaintenanceRoleCapabilityCreationParams 
 
-
-ISE C:\test\PrintOperator.psrc
-
+Code C:\test\PrintOperator.psrc
 
 # End Demo
 
